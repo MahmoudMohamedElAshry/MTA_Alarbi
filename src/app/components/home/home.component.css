@@ -25,8 +25,12 @@
 }
 
 .hero-img {
-    max-height: 420px;
-    object-fit: contain;
+    width: 100%;          /* الصورة تمتد كامل عرض الكارد/القسم */
+    max-height: 550px;    /* زيادة ارتفاع الصورة عن 420px */
+    object-fit: cover;    /* تملى المساحة بالكامل بدون تشويه */
+    border-radius: 12px;  /* حواف مستديرة لو حبيت */
+    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
 .btn-orange {

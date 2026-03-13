@@ -1,46 +1,117 @@
-/* Section Base */
 .about-section {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
 }
 
-/* Titles */
-.about-section .main-title,
-.about-section h3,
-.about-section h5 {
-    color: #0f172a;
+/* Title */
+
+.main-title {
+    font-size: 38px;
+    color: #1a2b4c;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-/* Manager Image */
-.about-manager {
-    max-width: 350px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+.main-title::after {
+
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #ff6b00;
+
+    display: block;
+    margin: 10px auto;
+
+    border-radius: 5px;
+
 }
 
-.about-manager:hover {
-    transform: scale(1.05);
+/* Manager */
+
+.manager-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Cards Achievements */
-.card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.manager-img {
+
+    max-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
 }
 
-.card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.manager-badge {
+
+    background: #ff6b00;
+    color: white;
+
+    padding: 6px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
 }
 
-/* Card Images */
-.card-hover img {
-    max-height: 180px;
-    object-fit: cover;
+.manager-name {
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a2b4c;
+    margin-top: 10px;
+
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-manager {
-        max-width: 100%;
-    }
+/* Stats */
+
+.stats-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-number {
+
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6b00;
+
+}
+
+.stat-text {
+
+    color: #555;
+
+}
+
+/* Achievements */
+
+.achievement-card {
+
+    background: white;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+}
+
+.achievement-card:hover {
+
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+}
+
+.achievement-card h5 {
+
+    color: #1a2b4c;
+    font-weight: bold;
+
 }

@@ -45,23 +45,23 @@
 
 <div class="container">
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let moto of motors">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let moto of motors">
 
-        <div class="card motor-card" (click)="GoToDetails(moto.Id)">
+            <div class="card motor-card" (click)="GoToDetails(moto.Id)">
 
-            <img [src]="moto.ImgUrls[0]" class="card-img-top">
+                <div class="image-box">
+                    <img [src]="moto.ImgUrls[0]" class="img-fluid">
+                </div>
 
-            <div class="card-body text-center">
-                <h5 class="card-title">{{moto.Name}}</h5>
-                <p class="card-price">
-                    السعر : {{moto.Price}}
-                </p>
+                <div class="card-body">
+                    <h5 class="card-title">{{moto.Name}}</h5>
+                    <p class="card-price">السعر : {{moto.Price}}</p>
+                </div>
+
             </div>
 
         </div>
-
     </div>
-</div>
 
 </div>

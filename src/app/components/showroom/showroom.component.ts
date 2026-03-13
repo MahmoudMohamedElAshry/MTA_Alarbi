@@ -1,13 +1,13 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { IMotorcycle } from '../../models/imotorcycle';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { staticmotorservice } from '../../Services/staticmotorservice.service';
 
 
 @Component({
   selector: 'app-showroom',
-  imports: [NgFor, CommonModule],
+  imports: [NgFor, CommonModule,RouterLink],
   templateUrl: './showroom.component.html',
   styleUrl: './showroom.component.css'
 })

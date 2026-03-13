@@ -52,8 +52,8 @@ export class staticmotorservice {
           "https://placehold.co/300x200?text=Mercedes+GLC",
           "https://placehold.co/300x200?text=Mercedes+GLC",
         ],
-        CategoryId: 2,
-        BrandId: 2,
+        CategoryId: 1,
+        BrandId: 1,
       },
       {
         Id: 14,
@@ -62,12 +62,13 @@ export class staticmotorservice {
         Description: "موتوسيكل بوكسر 150cc",
         Price: 43000,
         ImgUrls: [
-          "mta.jpg",
-          "https://placehold.co/300x200?text=Mercedes+GLC",
-          "https://placehold.co/300x200?text=Mercedes+GLC",
+          "Boxer.avif",
+          "Boxer1.avif",
+          "Boxer2.webp",
+          
         ],
-        CategoryId: 2,
-        BrandId: 2,
+        CategoryId: 1,
+        BrandId: 3,
       }
     ]
     this.categories = [

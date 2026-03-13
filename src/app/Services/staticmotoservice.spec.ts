@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { staticmotorservice } from './staticmotorservice.service';
 
-import { ServiceService } from './staticmotoservice';
-
-describe('ServiceService', () => {
-  let service: ServiceService;
+describe('staticmotorservice', () => {
+  let service: staticmotorservice;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ServiceService);
+    service = TestBed.inject(staticmotorservice);
   });
 
   it('should be created', () => {

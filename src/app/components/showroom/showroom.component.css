@@ -45,9 +45,9 @@
 }
 
 .feature-card i{
-    font-size:38px;
+    font-size:40px;
     color:#ff6b00;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .feature-card h6{
@@ -65,33 +65,61 @@
 
 .motor-card{
     border:none;
-    border-radius:12px;
+    border-radius:14px;
     overflow:hidden;
     cursor:pointer;
     transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    background:#fff;
 }
 
 .motor-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-.motor-card img{
-    height:220px;
-    object-fit:cover;
+/* container للصورة */
+.motor-card .img-box{
+    height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f8f9fa;
+    padding:15px;
 }
+
+/* الصورة نفسها */
+.motor-card img{
+    max-height:100%;
+    max-width:100%;
+    object-fit:contain; /* يخلي الصورة واضحة بدون قص */
+}
+
+/* body */
+.motor-card .card-body{
+    padding:22px;
+    text-align:center;
+}
+
+/* title */
 
 .card-title{
-    font-size:20px;
-    font-weight:600;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#222;
 }
+
+/* price */
 
 .card-price{
     color:#ff6b00;
-    font-weight:600;
-    font-size:18px;
+    font-weight:700;
+    font-size:20px;
 }
+
+/* main title */
+
 .main-title {
     color: #0d3b66;
     font-size: 2.5rem;

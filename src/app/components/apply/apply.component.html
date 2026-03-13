@@ -1,0 +1,166 @@
+<section class="application-section py-5" dir="rtl">
+    <div class="container">
+
+        <!-- Title -->
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold">قدّم الآن للعمل معنا</h2>
+                <p class="text-muted fs-5">
+                    املأ النموذج التالي لنتمكن من التواصل معك
+                </p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" class="bg-white p-5 rounded shadow">
+
+                    <!-- الاسم -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">الاسم الكامل</label>
+
+                        <input type="text" formControlName="fullName" class="form-control">
+
+                        <div class="text-danger" *ngIf="submitted && applyForm.controls['fullName'].invalid">
+                            الرجاء إدخال الاسم الكامل
+                        </div>
+
+                    </div>
+
+                    <!-- الهاتف -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">رقم الهاتف</label>
+
+                        <input type="tel" formControlName="phone" class="form-control">
+
+                        <div class="text-danger" *ngIf="submitted && applyForm.controls['phone'].invalid">
+
+                            الرجاء إدخال رقم هاتف صحيح
+
+                        </div>
+
+                    </div>
+
+                    <!-- نوع المركبة -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">نوع المركبة</label>
+
+                        <select formControlName="vehicleType" class="form-select">
+                            <option>موتوسيكل</option>
+                            <option>دراجة</option>
+                            <option>سكوتر</option>
+
+                        </select>
+
+                        <div class="text-danger" *ngIf="submitted && applyForm.controls['vehicleType'].invalid">
+
+                            الرجاء اختيار نوع المركبة
+
+                        </div>
+
+                    </div>
+
+                    <!-- المنطقة -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">المنطقة</label>
+
+                        <select formControlName="region" class="form-select">
+
+                            <option>القاهرة</option>
+                            <option>الجيزة</option>
+                            <option>الإسكندرية</option>
+
+                        </select>
+
+                        <div class="text-danger" *ngIf="submitted && applyForm.controls['region'].invalid">
+
+                            الرجاء اختيار المنطقة
+
+                        </div>
+
+                    </div>
+
+                    <!-- العمر -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">العمر</label>
+
+                        <input type="number" formControlName="age" class="form-control" min="18" max="65">
+
+                        <div class="text-danger" *ngIf="submitted && applyForm.controls['age'].invalid">
+
+                            العمر يجب أن يكون بين 18 و 65
+
+                        </div>
+
+                    </div>
+
+                    <!-- البطاقة الأمامية -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+                            صورة البطاقة (الوجه)
+                        </label>
+
+                        <input type="file" class="form-control" (change)="onFileChange($event,'front')"
+                            accept="image/*">
+
+                        <img *ngIf="cardFrontPreview" [src]="cardFrontPreview" class="preview-img mt-2">
+
+                    </div>
+
+                    <!-- البطاقة الخلفية -->
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+                            صورة البطاقة (الظهر)
+                        </label>
+
+                        <input type="file" class="form-control" (change)="onFileChange($event,'back')" accept="image/*">
+
+                        <img *ngIf="cardBackPreview" [src]="cardBackPreview" class="preview-img mt-2">
+
+                    </div>
+
+                    <div class="text-center mt-4">
+
+                        <button type="submit" class="btn btn-orange px-5 py-2">
+
+                            إرسال البيانات
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Success Message -->
+
+<div *ngIf="showMessage" class="message-overlay">
+
+    <div class="message-box">
+
+        <button class="btn-close" (click)="showMessage=false">×</button>
+
+        <i class="fas fa-check-circle success-icon"></i>
+
+        <h4>تم إرسال البيانات بنجاح</h4>
+
+        <p>
+            سيتم التواصل معك قريباً
+        </p>
+
+    </div>
+
+</div>
