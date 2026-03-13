@@ -1,0 +1,80 @@
+<div class="container details-page mt-5" dir="rtl">
+
+    <div class="row align-items-center g-5">
+
+        <!-- الصور -->
+        <div class="col-md-6">
+
+            <div id="motorCarousel" class="carousel slide motor-carousel" data-bs-ride="carousel"
+                data-bs-interval="5000">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item" *ngFor="let img of motors?.ImgUrls; let i = index"
+                        [class.active]="i === 0">
+
+                        <img [src]="img" class="d-block w-100 motor-img">
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#motorCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#motorCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- المعلومات -->
+        <div class="col-md-6 motor-info">
+
+            <h1 class="main-title fw-bold">{{ motors?.Name }}</h1>
+
+            <h3 class="motor-price">
+                السعر : {{ motors?.Price }}
+            </h3>
+
+            <ul class="motor-specs">
+
+                <li>
+                    <strong>الموديل :</strong>
+                    {{ motors?.Model }}
+                </li>
+
+                <li>
+                    <strong>الماركة :</strong>
+                    {{ getBrandName(motors?.BrandId!) }}
+                </li>
+
+                <li>
+                    <strong>الفئة :</strong>
+                    {{ getCategoryName(motors?.CategoryId!) }}
+                </li>
+
+                <li>
+                    <strong>الوصف :</strong>
+                    {{ motors?.Description }}
+                </li>
+
+            </ul>
+
+            <div class="motor-actions">
+                <button class="btn btn-outline-main">
+                    قدم الآن
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,92 @@
+.details-page{
+transform: translateY(30px);
+margin-bottom: 70px;
+
+}
+
+/* الصور */
+
+.motor-carousel{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.motor-img{
+height:420px;
+object-fit:cover;
+}
+
+/* المعلومات */
+
+.motor-info{
+text-align:right;
+padding:20px;
+}
+
+.motor-title{
+font-size:32px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.motor-price{
+color:#ff6b00;
+font-size:26px;
+font-weight:600;
+margin-bottom:25px;
+}
+
+/* المواصفات */
+
+.motor-specs{
+list-style:none;
+padding:0;
+margin-bottom:30px;
+}
+
+.motor-specs li{
+font-size:17px;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+/* الأزرار */
+
+.motor-actions{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-main{
+background:#ff6b00;
+color:white;
+padding:12px 28px;
+border-radius:6px;
+font-size:16px;
+border:none;
+transition:0.3s;
+}
+
+.btn-main:hover{
+background:#e65c00;
+}
+
+.btn-outline-main{
+border:2px solid #ff6b00;
+color:#ff6b00;
+padding:10px 24px;
+border-radius:6px;
+font-size:16px;
+transition:0.3s;
+}
+
+.btn-outline-main:hover{
+background:#ff6b00;
+color:white;
+}
+.main-title {
+    color: #0d3b66;
+    font-size: 2.5rem;
+}

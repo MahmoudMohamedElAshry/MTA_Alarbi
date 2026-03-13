@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-    <div class="container-fluid"> <!-- full width -->
+    <div class="container-fluid">
 
         <!-- Brand -->
         <a class="navbar-brand fw-bold fs-4" routerLink="/Home">MTA العربي</a>
@@ -12,30 +12,27 @@
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav w-100 d-flex justify-content-around align-items-center mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto me-auto d-flex justify-content-around w-100">
 
                 <li class="nav-item">
-                    <a routerLink="/Home" routerLinkActive="active-link" class="nav-link fw-semibold">الرئيسية</a>
+                    <a routerLink="/Home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+                        class="nav-link fw-semibold">الرئيسية</a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/Cars" routerLinkActive="active-link" class="nav-link fw-semibold">المعرض</a>
+                    <a routerLink="/Showroom" routerLinkActive="active-link" class="nav-link fw-semibold">المعرض</a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/About" routerLinkActive="active-link" class="nav-link fw-semibold">حولنا</a>
+                    <a routerLink="/About-Us" routerLinkActive="active-link" class="nav-link fw-semibold">حولنا</a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/Contact" routerLinkActive="active-link" class="nav-link fw-semibold">تواصل معنا</a>
+                    <a routerLink="/contact-us" routerLinkActive="active-link" class="nav-link fw-semibold">تواصل معنا</a>
                 </li>
 
                 <li class="nav-item">
                     <a routerLink="/Jobs" routerLinkActive="active-link" class="nav-link fw-semibold">فرص عمل</a>
-                </li>
-
-                <li class="nav-item">
-                    <a routerLink="/Events" routerLinkActive="active-link" class="nav-link fw-semibold">فعالياتنا</a>
                 </li>
 
             </ul>

@@ -1,48 +1,124 @@
-<section class="about-section shadow-sm py-5">
-    <div class="container about-container d-flex flex-column flex-lg-row align-items-center gap-5">
-        <!-- الصورة -->
-        <div class="about-image flex-shrink-0">
-            <img src="unnamed.jpg" alt="MTA العربي" class="img-fluid hero-img">
-        </div>
-        <!-- المحتوى -->
-        <div class="about-content text-center text-lg-start">
-            <h1 class="hero-title "> العربي رقم 1 في مصر</h1>
-            <p class="hero-text">
-                MTA العربي هو المكان الأفضل للحصول على فرص توظيف مميزة لعاملين التوصيل مع أفضل الشركات مثل طلبات.
-                نسعى لتسهيل عملية التوظيف وتقديم دعم كامل للعمال والشركات.
-            </p>
-            <a href="#" class="about-btn btn btn-primary btn-lg">تقديم سريع</a>
+<!-- HERO SECTION -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- IMAGE LEFT -->
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                <img src="unnamed.jpg" class="img-fluid hero-img" alt="MTA العربي">
+            </div>
+
+            <!-- TEXT RIGHT -->
+            <div class="col-lg-6 text-center text-lg-end">
+                <h1 class="hero-title">
+                    فرص توظيف لعاملين التوصيل مع
+                    <span class="text-orange">MTA العربي</span>
+                </h1>
+
+                <p class="hero-desc">
+                    نوفر فرص عمل مميزة لعاملين التوصيل مع أفضل الشركات مثل طلبات.
+                    إجراءات سريعة ودعم كامل لبدء العمل فوراً.
+                </p>
+
+                <div class="hero-buttons justify-content-lg-end">
+                    <a routerLink="/Jobs" class="btn btn-orange btn-lg">قدم الآن</a>
+                    <a routerLink="/About" class="btn btn-outline-dark btn-lg">اعرف أكثر</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<div class="row text-center py-5 g-4">
+<!-- FEATURES SECTION -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row text-center g-4">
 
-    <!-- Card 1: خدمة سريعة -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 card-hover">
-            <i class="bi bi-lightning-fill display-4 text-primary mb-3"></i>
-            <h5>خدمة سريعة</h5>
-            <p class="text-muted">نوفر خدمات 24 ساعة لمساعدة عمالنا في حال حدوث اي طوارئ.</p>
+            <div class="col-md-4">
+                <div class="feature-card p-4 shadow-sm">
+                    <i class="bi bi-lightning-fill"></i>
+                    <h4 class="mt-3">خدمة سريعة</h4>
+                    <p>فريق دعم متوفر 24 ساعة لمساعدة العاملين في أي وقت.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card p-4 shadow-sm">
+                    <i class="bi bi-person-check-fill"></i>
+                    <h4 class="mt-3">توظيف سريع</h4>
+                    <p>نساعدك تبدأ العمل في أسرع وقت مع أفضل الشركات.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card p-4 shadow-sm">
+                    <i class="bi bi-cash-stack"></i>
+                    <h4 class="mt-3">مكسب مضمون</h4>
+                    <p>فرص عمل تضمن لك دخل ثابت ومستمر في مجال التوصيل.</p>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
 
-    <!-- Card 2: توظيف سريع -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 card-hover">
-            <i class="bi bi-person-check-fill display-4 text-success mb-3"></i>
-            <h5>توظيف سريع</h5>
-            <p class="text-muted">نسهّل عملية توظيف عمال التوصيل مع أفضل الشركات بسرعة وكفاءة.</p>
+<!-- STEPS SECTION -->
+<section class="steps-section py-5" dir="rtl">
+    <div class="container text-center">
+
+        <h2 class="section-title mb-4">
+            خطوات التقديم مع <span class="text-orange">MTA العربي</span>
+        </h2>
+        <p class="section-desc mb-5">4 خطوات بسيطة تفصلك عن بدء العمل في مجال التوصيل</p>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="step-card shadow-sm position-relative p-4">
+                    <div class="step-number">1</div>
+                    <i class="bi bi-person-fill-add step-icon"></i>
+                    <h4 class="mt-3">سجل بياناتك</h4>
+                    <p>املأ استمارة التقديم البسيطة ببياناتك الأساسية وبيانات المركبة.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="step-card shadow-sm position-relative p-4">
+                    <div class="step-number">2</div>
+                    <i class="bi bi-file-earmark-text step-icon"></i>
+                    <h4 class="mt-3">مراجعة الطلب</h4>
+                    <p>يقوم فريقنا بمراجعة بياناتك بسرعة وكفاءة.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="step-card shadow-sm position-relative p-4">
+                    <div class="step-number">3</div>
+                    <i class="bi bi-briefcase step-icon"></i>
+                    <h4 class="mt-3">استلام العمل</h4>
+                    <p>نوصلك بالشركة المناسبة لبدء العمل فوراً.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="step-card shadow-sm position-relative p-4">
+                    <div class="step-number">4</div>
+                    <i class="bi bi-trophy step-icon"></i>
+                    <h4 class="mt-3">ابدأ الربح</h4>
+                    <p>ابدأ العمل وحقق دخل يومي ثابت ومستمر.</p>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
 
-    <!-- Card 3: مكسب مضمون -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 card-hover">
-            <i class="bi bi-cash-stack display-4 text-warning mb-3"></i>
-            <h5>مكسب مضمون</h5>
-            <p class="text-muted">نساعد العمال على تحقيق أرباح مستقرة ومضمونة من خلال التوصيل.</p>
-        </div>
+<!-- CALL TO ACTION SECTION -->
+<section class="cta-section py-5 text-center">
+    <div class="container">
+        <h2>جاهز تبدأ العمل الآن؟</h2>
+        <p>قدم الآن وابدأ رحلتك في مجال التوصيل مع أفضل الشركات.</p>
+        <a routerLink="/Jobs" class="btn btn-orange btn-lg">ابدأ التقديم</a>
     </div>
-
-</div>
+</section>

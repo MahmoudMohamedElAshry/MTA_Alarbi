@@ -1,0 +1,67 @@
+<div class="installment-section">
+    <div class="container text-center">
+
+        <h2 class="main-title fw-bold">
+            امتلك موتوسيكل أحلامك الآن
+        </h2>
+
+        <p class="installment-text">
+            نقدم لك إمكانية شراء الموتوسيكلات بالتقسيط المريح
+            <span class="highlight">بدون مقدم</span> وبإجراءات سهلة وسريعة.
+            اختر الموتوسيكل المناسب لك وابدأ رحلتك اليوم.
+        </p>
+
+        <div class="row justify-content-center installment-features">
+
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="bi bi-cash-stack"></i>
+                    <h6>بدون مقدم</h6>
+                    <p>ابدأ التقسيط فوراً بدون أي دفعة مقدمة.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="bi bi-calendar-check"></i>
+                    <h6>تقسيط مرن</h6>
+                    <p>أنظمة تقسيط متنوعة تناسب جميع العملاء.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="bi bi-lightning-charge"></i>
+                    <h6>موافقة سريعة</h6>
+                    <p>إجراءات بسيطة وموافقة في أسرع وقت.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container">
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let moto of motors">
+
+        <div class="card motor-card" (click)="GoToDetails(moto.Id)">
+
+            <img [src]="moto.ImgUrls[0]" class="card-img-top">
+
+            <div class="card-body text-center">
+                <h5 class="card-title">{{moto.Name}}</h5>
+                <p class="card-price">
+                    السعر : {{moto.Price}}
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>

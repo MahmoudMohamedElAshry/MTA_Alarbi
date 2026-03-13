@@ -1,0 +1,98 @@
+/* ===== installment section ===== */
+
+.installment-section{
+    background: linear-gradient(135deg,#fff7f2,#ffffff);
+    padding:70px 20px;
+    margin-bottom:50px;
+}
+
+.installment-title{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.installment-text{
+    font-size:18px;
+    color:#555;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+    line-height:1.8;
+}
+
+.highlight{
+    color:#ff6b00;
+    font-weight:700;
+}
+
+/* ===== features ===== */
+
+.feature-card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card i{
+    font-size:38px;
+    color:#ff6b00;
+    margin-bottom:12px;
+}
+
+.feature-card h6{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.feature-card p{
+    font-size:15px;
+    color:#666;
+}
+
+/* ===== product cards ===== */
+
+.motor-card{
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.motor-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.motor-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.card-title{
+    font-size:20px;
+    font-weight:600;
+}
+
+.card-price{
+    color:#ff6b00;
+    font-weight:600;
+    font-size:18px;
+}
+.main-title {
+    color: #0d3b66;
+    font-size: 2.5rem;
+}

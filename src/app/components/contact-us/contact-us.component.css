@@ -1,0 +1,74 @@
+/* Contact Section Base */
+.contact-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titles */
+.contact-section .main-title,
+.contact-section h4 {
+    color: #0f172a;
+}
+
+/* Form Inputs */
+.contact-form input,
+.contact-form textarea {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6b00;
+    box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+}
+
+/* Button */
+.btn-orange {
+    background-color: #ff6b00;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.social-icons {
+    justify-content: flex-start;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #555;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #ff6b00;
+    /* لون MTA */
+    color: white;
+    transform: scale(1.2);
+}

@@ -6,10 +6,10 @@ import { HomeComponent } from './components/home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent,FooterComponent,RouterOutlet],
+  imports: [NavbarComponent, FooterComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'MTA';
+  title = 'MtaAlarbi';
 }

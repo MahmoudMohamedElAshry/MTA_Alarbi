@@ -1,0 +1,46 @@
+/* Section Base */
+.about-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titles */
+.about-section .main-title,
+.about-section h3,
+.about-section h5 {
+    color: #0f172a;
+}
+
+/* Manager Image */
+.about-manager {
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-manager:hover {
+    transform: scale(1.05);
+}
+
+/* Cards Achievements */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Images */
+.card-hover img {
+    max-height: 180px;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-manager {
+        max-width: 100%;
+    }
+}
