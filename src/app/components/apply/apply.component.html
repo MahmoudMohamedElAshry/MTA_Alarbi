@@ -99,6 +99,19 @@
                         </div>
 
                     </div>
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+                            الصورة الشخصيلة 
+                        </label>
+
+                        <input type="file" class="form-control" (change)="onFileChange($event,'front')"
+                            accept="image/*">
+
+                        <img *ngIf="cardFrontPreview" [src]="cardFrontPreview" class="preview-img mt-2">
+
+                    </div>
+
 
                     <!-- البطاقة الأمامية -->
                     <div class="mb-3">
