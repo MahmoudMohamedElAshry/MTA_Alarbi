@@ -1,36 +1,51 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-    <div class="container-fluid">
+    <div class="container">
 
-        <!-- Brand -->
-        <a class="navbar-brand fw-bold fs-4" routerLink="/Home">MTA العربي</a>
+        <!-- Logo -->
+        <a class="brandcaler navbar-brand fw-bold fs-4" routerLink="/Home">
+            MTA العربي
+        </a>
 
-        <!-- Toggler for mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto me-auto d-flex justify-content-around w-100">
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+
+            <ul class="navbar-nav w-75 d-flex justify-content-between text-center">
 
                 <li class="nav-item">
                     <a routerLink="/Home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
-                        class="nav-link fw-semibold">الرئيسية</a>
+                        class="nav-link nav-animated" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        الرئيسية
+                    </a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/Showroom" routerLinkActive="active-link" class="nav-link fw-semibold">المعرض</a>
+                    <a routerLink="/Showroom" routerLinkActive="active-link" class="nav-link nav-animated"
+                        data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        المعرض
+                    </a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/About-Us" routerLinkActive="active-link" class="nav-link fw-semibold">حولنا</a>
+                    <a routerLink="/About-Us" routerLinkActive="active-link" class="nav-link nav-animated"
+                        data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        حولنا
+                    </a>
                 </li>
 
                 <li class="nav-item">
-                    <a routerLink="/contact-us" routerLinkActive="active-link" class="nav-link fw-semibold">تواصل معنا</a>
+                    <a routerLink="/contact-us" routerLinkActive="active-link" class="nav-link nav-animated"
+                        data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        تواصل معنا
+                    </a>
                 </li>
+
             </ul>
+
         </div>
     </div>
 </nav>

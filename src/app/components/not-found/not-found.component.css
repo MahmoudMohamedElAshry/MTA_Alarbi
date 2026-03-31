@@ -1,0 +1,59 @@
+.notfound-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg,#f8f9fa,#ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.notfound-section h1 {
+    font-size: 6rem; /* أصغر شوية */
+    color: #ff6b00;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.notfound-section h1 .num {
+    display: inline-block;
+    animation: float 1.5s ease-in-out infinite;
+}
+
+.notfound-section h1 .num:nth-child(1) { animation-delay: 0s; }
+.notfound-section h1 .num:nth-child(2) { animation-delay: 0.2s; }
+.notfound-section h1 .num:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); } /* أقل شوية */
+}
+
+.notfound-section h2,
+.notfound-section p {
+    font-size: 1.5rem;
+}
+
+.small-text {
+    font-size: 1.1rem; /* نص أصغر */
+}
+
+.btn-orange {
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 25px; /* أصغر شوية */
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.btn-orange:hover {
+    background-color: #e65c00;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .notfound-section h1 { font-size: 4.5rem; }
+    .small-text { font-size: 1rem; }
+    .decor-icon { font-size: 45px; }
+}

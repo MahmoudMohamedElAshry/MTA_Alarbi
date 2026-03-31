@@ -105,10 +105,10 @@
                             الصورة الشخصيلة 
                         </label>
 
-                        <input type="file" class="form-control" (change)="onFileChange($event,'front')"
+                        <input type="file" class="form-control" (change)="onFileChange($event,'photo')"
                             accept="image/*">
 
-                        <img *ngIf="cardFrontPreview" [src]="cardFrontPreview" class="preview-img mt-2">
+                        <img *ngIf="personalPhoto" [src]="personalPhoto" class="preview-img mt-2">
 
                     </div>
 

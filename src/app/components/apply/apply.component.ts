@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-apply',
-  imports: [RouterLink,NgClass, ReactiveFormsModule, FormsModule, NgIf],
+  imports: [ReactiveFormsModule, FormsModule, NgIf],
   templateUrl: './apply.component.html',
   styleUrl: './apply.component.css'
 })
@@ -17,6 +17,7 @@ applyForm!: FormGroup
 
   cardFrontPreview: any
   cardBackPreview: any
+  personalPhoto: any
 
   constructor(private fb: FormBuilder) {
 
@@ -40,7 +41,9 @@ applyForm!: FormGroup
       ]],
 
       cardFront: ['', Validators.required],
-      cardBack: ['', Validators.required]
+      cardBack: ['', Validators.required],
+      personalPhoto: ['', Validators.required]
+
 
     })
 
@@ -80,6 +83,11 @@ applyForm!: FormGroup
       if (type === "back") {
         this.cardBackPreview = reader.result
         this.applyForm.patchValue({ cardBack: file })
+      }
+
+      if (type === "photo") {
+        this.personalPhoto = reader.result
+        this.applyForm.patchValue({ personalPhoto: file })
       }
 
     }
