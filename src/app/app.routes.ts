@@ -6,6 +6,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ShowroomComponent } from './components/showroom/showroom.component';
 import { ApplyComponent } from './components/apply/apply.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { EventsComponent } from './components/events/events.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'Showroom', component: ShowroomComponent },
     { path: 'About-Us', component: AboutUsComponent },
     { path: 'Apply', component: ApplyComponent },
+    { path: 'Events', component: EventsComponent },
     { path: '**', component: NotFoundComponent }
 ];
