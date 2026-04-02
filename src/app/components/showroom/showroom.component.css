@@ -1,7 +1,7 @@
 /* ===== installment section ===== */
 
 .installment-section{
-    background: linear-gradient(135deg,#fff7f2,#ffffff);
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
     padding:70px 20px;
     margin-bottom:50px;
 }
@@ -85,7 +85,7 @@
     align-items:center;
     justify-content:center;
     background:#f8f9fa;
-    padding:15px;
+    padding:20px;
 }
 
 /* الصورة نفسها */

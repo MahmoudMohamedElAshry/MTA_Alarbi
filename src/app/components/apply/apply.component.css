@@ -1,115 +1,131 @@
-.application-section{
-background:#f8f9fa;
+/* Overlay خلف الرسالة */
+.message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-in;
 }
 
-.application-section h2{
-color:#1a2b4c;
+.btn-orange {
+    background-color: #ff6b00;
+    /* برتقالي */
+    color: #fff;
+    border: none;
+    transition: 0.3s;
 }
 
-.form-control,
-.form-select{
-
-border-radius:10px;
-padding:12px;
-
+.btn-orange:hover {
+    background-color: #e65a00;
+    /* غامق شوية عند hover */
 }
 
-.form-control:focus,
-.form-select:focus{
-
-border-color:#ff6b00;
-box-shadow:0 0 6px rgba(255,107,0,0.5);
-
+/* صندوق الرسالة */
+.message-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: popUp 0.3s ease-in-out;
 }
 
-.btn-orange{
-
-background:#ff6b00;
-color:white;
-border:none;
-transition:.3s;
-
+/* ايقونة النجاح */
+.success-icon {
+    color: #28a745;
+    font-size: 50px;
+    margin-bottom: 1rem;
 }
 
-.btn-orange:hover{
-
-background:#e65c00;
-transform:translateY(-2px);
-
+/* زر اغلاق */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+    transition: 0.2s;
 }
 
-.preview-img{
-
-max-height:150px;
-border-radius:8px;
-border:1px solid #ddd;
-
+.btn-close:hover {
+    color: #555;
 }
 
-/* success message */
-
-.message-overlay{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-z-index:9999;
-
+/* عنوان الرسالة */
+.message-box h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.message-box{
-
-background:white;
-padding:35px;
-border-radius:12px;
-text-align:center;
-width:350px;
-
-position:relative;
-
-box-shadow:0 5px 25px rgba(0,0,0,.2);
-
+/* نص الرسالة */
+.message-box p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
 }
 
-.success-icon{
+/* Animation للظهور */
+@keyframes popUp {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
 
-font-size:55px;
-color:#28a745;
-margin-bottom:15px;
-
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.btn-close{
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
-position:absolute;
-top:10px;
-right:10px;
-
-width:26px;
-height:26px;
-
-border-radius:50%;
-border:none;
-
-background:#dc3545;
-color:white;
-
-font-size:18px;
-
-cursor:pointer;
-
+    to {
+        opacity: 1;
+    }
 }
 
-.btn-close:hover{
+/* Preview الصور */
+.preview-img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin-top: 0.5rem;
+}
 
-background:#bb2d3b;
+/* Responsive لكل الشاشات */
+@media (max-width: 576px) {
+    .message-box {
+        padding: 1.5rem 1rem;
+    }
 
+    .success-icon {
+        font-size: 40px;
+    }
+
+    .message-box h4 {
+        font-size: 1.2rem;
+    }
+
+    .message-box p {
+        font-size: 0.95rem;
+    }
 }
