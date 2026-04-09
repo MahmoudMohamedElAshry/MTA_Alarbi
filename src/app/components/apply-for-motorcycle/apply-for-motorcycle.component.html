@@ -1,0 +1,46 @@
+<div class="container py-5" dir="rtl">
+    <div class="row g-5">
+        <!-- صور الموتور -->
+        <div class="col-md-6">
+            <div id="motorCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item" *ngFor="let img of motorData?.ImgUrls; let i = index"
+                        [class.active]="i === 0">
+                        <img [src]="img" class="d-block w-100" style="height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#motorCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#motorCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- معلومات الموتور + فورم -->
+        <div class="col-md-6">
+            <h1>{{ motorData?.Name }}</h1>
+            <h3 class="text-orange">{{ motorData?.Price | currency:'EGP':'symbol':'1.0-0' }}</h3>
+            <ul>
+                <li><strong>الموديل:</strong> {{ motorData?.Model }}</li>
+                <li><strong>الماركة:</strong> {{ getBrandName(motorData?.BrandId!) }}</li>
+                <li><strong>الفئة:</strong> {{ getCategoryName(motorData?.CategoryId!) }}</li>
+                <li><strong>الوصف:</strong> {{ motorData?.Description }}</li>
+            </ul>
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-4">
+                <input formControlName="name" placeholder="الاسم" class="form-control mb-2">
+                <input formControlName="phone" placeholder="الموبايل" class="form-control mb-2">
+                <input formControlName="email" placeholder="الايميل" class="form-control mb-2">
+                <input formControlName="address" placeholder="العنوان" class="form-control mb-2">
+                <textarea formControlName="notes" placeholder="ملاحظات" class="form-control mb-2"></textarea>
+                <button class="btn btn-main w-100" [disabled]="isLoading">
+                    {{ isLoading ? 'جاري الإرسال...' : 'إرسال الطلب' }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

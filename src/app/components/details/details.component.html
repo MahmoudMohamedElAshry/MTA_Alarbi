@@ -1,24 +1,23 @@
-<div class="container details-page mt-5" dir="rtl">
+<div class="container details-page py-5" dir="rtl">
 
-    <div class="row align-items-center g-5">
+    <div class="row g-5">
 
-        <!-- الصور -->
-        <div class="col-md-6">
+        <!-- Images Section -->
+        <div class="col-lg-6">
+            <div id="motorCarousel" class="carousel slide motor-carousel" data-bs-ride="carousel">
 
-            <div id="motorCarousel" class="carousel slide motor-carousel" data-bs-ride="carousel"
-                data-bs-interval="5000">
-
-                <div class="carousel-inner">
+                <div class="carousel-inner rounded-4 overflow-hidden shadow-sm">
 
                     <div class="carousel-item" *ngFor="let img of motors?.ImgUrls; let i = index"
                         [class.active]="i === 0">
 
-                        <img [src]="img" class="d-block w-100 motor-img">
+                        <img [src]="img" class="w-100 motor-img" alt="motor image">
 
                     </div>
 
                 </div>
 
+                <!-- Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#motorCarousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -30,46 +29,54 @@
                 </button>
 
             </div>
-
         </div>
 
-        <!-- المعلومات -->
-        <div class="col-md-6 motor-info">
+        <!-- Info Section -->
+        <div class="col-lg-6">
 
-            <h1 class="main-title fw-bold">{{ motors?.Name }}</h1>
+            <div class="motor-info-card p-4 shadow-sm rounded-4">
 
-            <h3 class="motor-price">
-                السعر : {{ motors?.Price }}
-            </h3>
+                <h1 class="fw-bold mb-3">{{ motors?.Name }}</h1>
 
-            <ul class="motor-specs">
+                <h2 class="price mb-4">
+                    {{ motors?.Price | currency:'EGP' }}
+                </h2>
 
-                <li>
-                    <strong>الموديل :</strong>
-                    {{ motors?.Model }}
-                </li>
+                <div class="specs">
 
-                <li>
-                    <strong>الماركة :</strong>
-                    {{ getBrandName(motors?.BrandId!) }}
-                </li>
+                    <div class="spec-item">
+                        <span>الموديل</span>
+                        <strong>{{ motors?.Model }}</strong>
+                    </div>
 
-                <li>
-                    <strong>الفئة :</strong>
-                    {{ getCategoryName(motors?.CategoryId!) }}
-                </li>
+                    <div class="spec-item">
+                        <span>الماركة</span>
+                        <strong>{{ getBrandName(motors?.BrandId!) }}</strong>
+                    </div>
 
-                <li>
-                    <strong>الوصف :</strong>
-                    {{ motors?.Description }}
-                </li>
+                    <div class="spec-item">
+                        <span>الفئة</span>
+                        <strong>{{ getCategoryName(motors?.CategoryId!) }}</strong>
+                    </div>
 
-            </ul>
+                </div>
 
-            <div class="motor-actions">
-                <button class="btn btn-outline-main">
-                    قدم الآن
-                </button>
+                <div class="description mt-4">
+                    <h5>الوصف</h5>
+                    <p>{{ motors?.Description }}</p>
+                </div>
+
+                <div class="actions mt-4 d-flex gap-3">
+
+                    <button [routerLink]="['/ApplyForMotorcycle', motors?.Id]" class="btn btn-main w-100">
+                        قدم الآن
+                    </button>
+
+                    <button routerLink="/showroom" class="btn btn-outline-dark w-100">
+                        العودة إلى المعرض
+                    </button>
+
+                </div>
 
             </div>
 

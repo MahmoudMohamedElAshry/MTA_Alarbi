@@ -2,15 +2,16 @@ import { Injectable } from '@angular/core';
 import { IBrand } from '../models/ibrand';
 import { ICategory } from '../models/icategory';
 import { IMotorcycle } from '../models/imotorcycle';
-
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class staticmotorservice {
-  motors:IMotorcycle[];
-  categories:ICategory[];
-  brands:IBrand[]; 
+  motors: IMotorcycle[];
+  categories: ICategory[];
+  brands: IBrand[];
+
   constructor() {
     this.motors = [
       {
@@ -65,43 +66,45 @@ export class staticmotorservice {
           "Boxer.avif",
           "Boxer1.avif",
           "Boxer2.webp",
-          
         ],
         CategoryId: 1,
         BrandId: 3,
       }
-    ]
+    ];
     this.categories = [
-      {
-        Id: 1,
-        Name: "دراجلة ناريه"
-      },
-    ]
+      { Id: 1, Name: "دراجلة ناريه" },
+    ];
     this.brands = [
       { Id: 1, Name: "هاوجيانغ" },
       { Id: 2, Name: "دايون" },
       { Id: 3, Name: "بوكسر" },
-    ]
+    ];
   }
+
+  // 🔹 Observable version of motor details
+  getMotorDetails(id: number): Observable<IMotorcycle | undefined> {
+    const motor = this.motors.find(m => m.Id === id);
+    return of(motor); // مؤقت قبل ربط الـ API حقيقي
+  }
+
   GetAllMotorcycles(): IMotorcycle[] {
-    return this.motors
+    return this.motors;
   }
+
   GetMotorByCategoryId(categoryId: number): IMotorcycle[] {
-    if (categoryId == 0)
-      return this.motors
-    return this.motors.filter((moto) => moto.CategoryId == categoryId)
-}   
-GetMotorById(id: number): IMotorcycle | null {
-    let Founded = this.motors.find((moto) => moto.Id == id)
-    if (Founded != undefined)
-      return Founded
-    else
-      return null;
+    if (categoryId === 0) return this.motors;
+    return this.motors.filter(moto => moto.CategoryId === categoryId);
   }
+
+  GetMotorById(id: number): IMotorcycle | null {
+    return this.motors.find(moto => moto.Id === id) || null;
+  }
+
   GetCategoryName(id: number): string {
-    return this.categories.find((c) => c.Id === id)?.Name ?? 'Unknown';
+    return this.categories.find(c => c.Id === id)?.Name ?? 'Unknown';
   }
+
   GetBrandName(id: number): string {
-    return this.brands.find((c) => c.Id === id)?.Name ?? 'Unknown';
+    return this.brands.find(c => c.Id === id)?.Name ?? 'Unknown';
   }
 }

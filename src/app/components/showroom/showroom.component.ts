@@ -1,13 +1,13 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { IMotorcycle } from '../../models/imotorcycle';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { staticmotorservice } from '../../Services/staticmotorservice.service';
 
 
 @Component({
   selector: 'app-showroom',
-  imports: [NgFor, CommonModule,RouterLink],
+  imports: [NgFor, CommonModule],
   templateUrl: './showroom.component.html',
   styleUrl: './showroom.component.css'
 })
@@ -25,7 +25,7 @@ export class ShowroomComponent {
     return this.staticmotorsservice.GetBrandName(id)
   }
   GoToDetails(id: number) {
-    this._router.navigate(['/Details', id])
+    this._router.navigate(['/details', id])
   }
 
 

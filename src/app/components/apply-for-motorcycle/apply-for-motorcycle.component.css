@@ -1,0 +1,53 @@
+:root {
+    --main-color: #ff6b00;
+    --main-hover: #e65c00;
+    --light-orange: #fff3e6;
+}
+
+.motor-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.price {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* الفورم */
+.form-wrapper {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.2);
+}
+
+/* زر */
+.btn-main {
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+}
+
+.btn-main:hover {
+    background: var(--main-hover);
+}
