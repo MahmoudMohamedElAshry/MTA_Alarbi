@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 @Component({
   selector: 'app-apply',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, NgIf, NgClass, NgFor],
+  imports: [ReactiveFormsModule, FormsModule, NgIf],
   templateUrl: './apply.component.html',
   styleUrls: ['./apply.component.css']
 })

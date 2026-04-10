@@ -1,46 +1,80 @@
-<div class="container py-5" dir="rtl">
-    <div class="row g-5">
-        <!-- صور الموتور -->
-        <div class="col-md-6">
-            <div id="motorCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item" *ngFor="let img of motorData?.ImgUrls; let i = index"
-                        [class.active]="i === 0">
-                        <img [src]="img" class="d-block w-100" style="height: 400px; object-fit: cover;">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#motorCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#motorCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
+<div class="page" dir="rtl">
 
-        <!-- معلومات الموتور + فورم -->
-        <div class="col-md-6">
-            <h1>{{ motorData?.Name }}</h1>
-            <h3 class="text-orange">{{ motorData?.Price | currency:'EGP':'symbol':'1.0-0' }}</h3>
-            <ul>
-                <li><strong>الموديل:</strong> {{ motorData?.Model }}</li>
-                <li><strong>الماركة:</strong> {{ getBrandName(motorData?.BrandId!) }}</li>
-                <li><strong>الفئة:</strong> {{ getCategoryName(motorData?.CategoryId!) }}</li>
-                <li><strong>الوصف:</strong> {{ motorData?.Description }}</li>
-            </ul>
+    <div class="card">
 
-            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-4">
-                <input formControlName="name" placeholder="الاسم" class="form-control mb-2">
-                <input formControlName="phone" placeholder="الموبايل" class="form-control mb-2">
-                <input formControlName="email" placeholder="الايميل" class="form-control mb-2">
-                <input formControlName="address" placeholder="العنوان" class="form-control mb-2">
-                <textarea formControlName="notes" placeholder="ملاحظات" class="form-control mb-2"></textarea>
-                <button class="btn btn-main w-100" [disabled]="isLoading">
-                    {{ isLoading ? 'جاري الإرسال...' : 'إرسال الطلب' }}
-                </button>
-            </form>
-        </div>
+        <h2>طلب التقديم على الموتوسيكل</h2>
+        <p>املأ البيانات وسيتم التواصل معك خلال 3 أيام عمل</p>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <!-- NAME -->
+            <label>الاسم</label>
+            <input formControlName="name" type="text" placeholder="الاسم بالكامل">
+
+            <!-- AGE -->
+            <label>السن</label>
+            <input formControlName="age" type="number" placeholder="21 سنة أو أكثر">
+
+            <!-- PHONE -->
+            <label>الموبايل</label>
+            <input formControlName="phone" type="text" placeholder="01xxxxxxxxx">
+
+            <!-- ADDRESS -->
+            <label>العنوان</label>
+            <input formControlName="address" type="text" placeholder="محل الإقامة">
+
+            <!-- PERSONAL IMAGE -->
+            <label>الصورة الشخصية</label>
+            <input type="file" (change)="onFileChange($event,'personalImage')">
+            <img *ngIf="previews.personalImage" [src]="previews.personalImage">
+
+            <!-- ID FRONT -->
+            <label>البطاقة (وش)</label>
+            <input type="file" (change)="onFileChange($event,'idFront')">
+            <img *ngIf="previews.idFront" [src]="previews.idFront">
+
+            <!-- ID BACK -->
+            <label>البطاقة (ظهر)</label>
+            <input type="file" (change)="onFileChange($event,'idBack')">
+            <img *ngIf="previews.idBack" [src]="previews.idBack">
+
+            <!-- GUARANTOR FRONT -->
+            <label>بطاقة الضامن (وش)</label>
+            <input type="file" (change)="onFileChange($event,'guarantorFront')">
+            <img *ngIf="previews.guarantorFront" [src]="previews.guarantorFront">
+
+            <!-- GUARANTOR BACK -->
+            <label>بطاقة الضامن (ظهر)</label>
+            <input type="file" (change)="onFileChange($event,'guarantorBack')">
+            <img *ngIf="previews.guarantorBack" [src]="previews.guarantorBack">
+
+            <!-- BUTTON -->
+            <button class="btn-orange" type="submit" [disabled]="isLoading">
+                {{ isLoading ? 'جاري الإرسال...' : 'إرسال الطلب' }}
+            </button>
+
+        </form>
+
     </div>
+
+</div>
+<!-- 🔥 Success Modal -->
+<div class="modal-overlay" *ngIf="showMessage">
+
+    <div class="modal-box">
+
+        <div class="icon-circle">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <h3>تم إرسال الطلب بنجاح</h3>
+
+        <p>تم استلام بياناتك، وسيتم التواصل معك خلال 3 أيام عمل</p>
+
+        <button class="btn-ok" (click)="closeMessage()">
+            حسناً
+        </button>
+
+    </div>
+
 </div>
