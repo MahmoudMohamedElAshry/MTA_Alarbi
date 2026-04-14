@@ -41,10 +41,29 @@
 .team-img:hover {
     transform: scale(1.05);
 }
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 40px;
+    width: 100%; /* يخليها تاخد العرض كله */
+}
 
-/* ===== TEXT ===== */
+.btn-orange {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 15px 50px; /* 👈 ده اللي يخليه أعرض */
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-
+.btn-orange:hover {
+    background: #e65c00;
+    transform: translateY(-2px);
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .main-title {

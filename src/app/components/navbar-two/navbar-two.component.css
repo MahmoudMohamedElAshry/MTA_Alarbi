@@ -43,7 +43,6 @@
     color: #ff6b00;
 }
 
-/* تكبير بسيط */
 .bottom-navbar .nav-item.active-link i {
     transform: scale(1.2);
 }
@@ -53,7 +52,6 @@
     color: #ff6b00;
 }
 
-/* 📱 موبايل */
 @media (max-width: 576px) {
     .bottom-navbar {
         padding: 9px 5px;
